@@ -1,0 +1,62 @@
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.selectable {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+#moveKeys{
+color: white;
+text-align: center;
+background-color:black;
+padding: 20px;
+}
+
+.inputTopBar{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.topBarItem{
+width:10%;
+background:green;
+padding-top:20px;
+padding-bottom:20px;
+text-align: center;
+}
+.inputKeys{
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+   background:#999;
+}
+.floatLeft{
+  float: left;
+}
+.floatRight{
+float: right;
+}
+.width50LR{
+width: 50%;
+float:left;
+}
+.width50TB{
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+.width33TB{
+  float:left;
+  width: 33%;
+  margin-left: auto;
+  margin-right: auto;
+}

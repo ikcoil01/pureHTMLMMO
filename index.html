@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <title>IOS GAME</title>
+      <!-- Bootstrap -->
+      <link href="css\bootstrap.css" rel="stylesheet">
+      <link href="css/character.css" rel="stylesheet">
+      <link href="css/background.css" rel="stylesheet">
+      <link href="css/text.css" rel="stylesheet">
+      <link href="css/collisionobj.css" rel="stylesheet">
+      <script src="js/movement.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+   </head>
+
+<body id="body" class="unselectable zoom">
+  <div class="inputKeys">
+    <div class="inputTopBar row">
+      <h5 class="floatLeft topBarItem">spell1</h5>
+      <h5 class="floatLeft topBarItem">spell2</h5>
+      <h5 class="floatLeft topBarItem">item1</h5>
+    </div>
+    <div class="row">
+      <div class="width33TB" id="moveKeysUpLeft">
+        <a class="absolutebottom" onmousedown="goUpLeft()" onmouseup="stopUpLeft()" ontouchstart="goUpLeft()" ontouchend="stopUpLeft()">
+          <div id="moveKeys">LeftUP</div>
+        </a>
+      </div>
+      <div class="width33TB" id="moveKeysUp">
+        <a class="absolutebottom" onmousedown="goUp()" onmouseup="stopUp()" ontouchstart="goUp()" ontouchend="stopUp()">
+          <div id="moveKeys">UP</div>
+        </a>
+      </div>
+      <div class="width33TB" id="moveKeysUpRight">
+        <a class="absolutebottom" onmousedown="goUpRight()" onmouseup="stopUpRight()" ontouchstart="goUpRight()" ontouchend="stopUpRight()">
+          <div id="moveKeys">RightUP</div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="width33TB" id="moveKeysLeft">
+        <a class="absolutebottom" onmousedown="goLeft()" onmouseup="stopLeft()" ontouchstart="goLeft()" ontouchend="stopLeft()">
+          <div id="moveKeys">LEFT</div>
+        </a>
+      </div>
+      <div class="width33TB" id="moveKeysMiddle">
+        <a class="absolutebottom" onmousedown="" onmouseup="" ontouchstart="" ontouchend="">
+          <div id="moveKeys">MIDDLE</div>
+        </a>
+      </div>
+      <div class="width33TB" id="moveKeysRight">
+        <a class="absolutebottom" onmousedown="goRight()" onmouseup="stopRight()" ontouchstart="goRight()" ontouchend="stopRight()">
+          <div id="moveKeys">RIGHT</div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="width33TB" id="moveKeysDownLeft">
+        <a class="absolutebottom" onmousedown="goDownLeft()" onmouseup="stopDownLeft()" ontouchstart="goDownLeft()" ontouchend="stopDownLeft()">
+          <div id="moveKeys">DOWNLeft</div>
+        </a>
+      </div>
+      <div class="width33TB" id="moveKeysDown">
+        <a class="absolutebottom" onmousedown="goDown()" onmouseup="stopDown()" ontouchstart="goDown()" ontouchend="stopDown()">
+          <div id="moveKeys">DOWN</div>
+        </a>
+      </div>
+      <div class="width33TB" id="moveKeysDownRight">
+        <a class="absolutebottom" onmousedown="goDownRight()" onmouseup="stopDownRight()" ontouchstart="goDownRight()" ontouchend="stopDownRight()">
+          <div id="moveKeys">DOWNRight</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="usersCharacter">
+      <img id="characterImage" src="images/still.gif" width="20px"/>
+  </div>
+  <!--<div id="ground">
+      <img src="images/fire.jpg" width="50px"/>
+  </div>-->
+      <script src="js/collision.js"></script>
+</body>
+</html>
