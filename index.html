@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta charset="UTF-8">
       <meta content="IE=edge" http-equiv="X-UA-Compatible">
       <meta content="width=device-width, initial-scale=1" name="viewport">
       <title>IOS GAME</title>
@@ -10,11 +11,14 @@
       <link href="css/background.css" rel="stylesheet">
       <link href="css/text.css" rel="stylesheet">
       <link href="css/collisionobj.css" rel="stylesheet">
-      <script src="js/movement.js"></script>
+      <script src="js/entry.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
    </head>
 
 <body id="body" class="unselectable zoom">
+  <canvas id="canvas" width="800" height="600" style="background: url('./images/background.gif')">
+    Your browser does not support the canvas element.
+  </canvas>
   <div class="inputKeys">
     <div class="inputTopBar row">
       <h5 class="floatLeft topBarItem">spell1</h5>
@@ -40,7 +44,7 @@
     </div>
     <div class="row">
       <div class="width33TB" id="moveKeysLeft">
-        <a class="absolutebottom" onmousedown="goLeft()" onmouseup="stopLeft()" ontouchstart="goLeft()" ontouchend="stopLeft()">
+        <a class="absolutebottom">
           <div id="moveKeys">LEFT</div>
         </a>
       </div>
@@ -50,7 +54,7 @@
         </a>
       </div>
       <div class="width33TB" id="moveKeysRight">
-        <a class="absolutebottom" onmousedown="goRight()" onmouseup="stopRight()" ontouchstart="goRight()" ontouchend="stopRight()">
+        <a class="absolutebottom">
           <div id="moveKeys">RIGHT</div>
         </a>
       </div>
@@ -74,11 +78,10 @@
     </div>
   </div>
   <div id="usersCharacter">
-      <img id="characterImage" src="images/still.gif" width="20px"/>
+      <img id="characterImage" src="images/idleAva.gif" width="20px"/>
   </div>
   <!--<div id="ground">
       <img src="images/fire.jpg" width="50px"/>
   </div>-->
-      <script src="js/collision.js"></script>
 </body>
 </html>
