@@ -1,36 +1,41 @@
-function goUp(){
-    document.getElementById("characterImage").src = characterMoveUpImage;
-    document.getElementById("moveKeysUp").style.visibility = "visible";
-    document.getElementById("moveKeysDown").style.visibility = "hidden";
-    document.getElementById("moveKeysLeft").style.visibility = "hidden";
-    document.getElementById("moveKeysRight").style.visibility = "hidden";
-    document.getElementById("moveKeysDownLeft").style.visibility = "hidden";
-    document.getElementById("moveKeysDownRight").style.visibility = "hidden";
-    document.getElementById("moveKeysUpLeft").style.visibility = "hidden";
-    document.getElementById("moveKeysUpRight").style.visibility = "hidden";
+var interval;
+var mousekey = document.getElementById("moveKeysUp")
 
-    if(runningMovementCommand && !runningMovementUP){
-      return
-    }
-    runningMovementCommand = true;
-    runningMovementUP = true;
+mousekey.addEventListener('mousedown', function() {
+  document.getElementById("characterImage").src = "images/walkingLeftAva.gif";
+  interval = setInterval(goUp, 200);
+});
+mousekey.addEventListener('mouseup', function() {
+  clearInterval(interval);
+  stopUp();
+});
+
+function goUp(){
   
-    var currPos = getCurrentPosition();
-    var x = currPos[0].replace("px","");
-    var y = currPos[2].replace("px","");
-    x = parseInt(x);
-    if(isChrome){
-      y = parseInt(y) - ySpeed;
-    }else{
-      y = parseInt(y) + ySpeed;
-    }
-    var newPos=x+"px,"+y+"px";
-    document.body.style.backgroundPosition = newPos;
-  }
+  document.getElementById("moveKeysRight").style.visibility = "hidden";
+  document.getElementById("moveKeysDown").style.visibility = "hidden";
+  document.getElementById("moveKeysLeft").style.visibility = "hidden";
+  document.getElementById("moveKeysUp").style.visibility = "visible";
+  document.getElementById("moveKeysDownLeft").style.visibility = "hidden";
+  document.getElementById("moveKeysDownRight").style.visibility = "hidden";
+  document.getElementById("moveKeysUpLeft").style.visibility = "hidden";
+  document.getElementById("moveKeysUpRight").style.visibility = "hidden";
   
-  function stopUp(){
-    clearInterval(upInvVar);
-    makeAllMovementsVisbile();
-    setIdleAnimation();
-  }
-  var upInvVar;
+    var currYPos = document.getElementById("usersCharacter").style.top;
+    if(currYPos == ""){
+      document.getElementById("usersCharacter").style.top = "0px";
+    }
+    
+      currYPos=currYPos.replace("px","");
+    
+    currYPos = parseInt(currYPos)-2;
+    var newPos=currYPos+"px";
+    document.getElementById("usersCharacter").style.top = newPos;
+
+}
+
+function stopUp(){
+  
+  document.getElementById("characterImage").src = "images/idleAva.gif";
+  makeAllMovementsVisbile();
+}

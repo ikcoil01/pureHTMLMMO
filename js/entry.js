@@ -40,7 +40,15 @@ window.onload=function(){
     var imported = document.createElement('script');
     imported.src = 'js/movement/right/right.js';
     document.head.appendChild(imported);
-    
+
+    var imported = document.createElement('script');
+    imported.src = 'js/movement/down/down.js';
+    document.head.appendChild(imported);
+
+    var imported = document.createElement('script');
+    imported.src = 'js/movement/up/up.js';
+    document.head.appendChild(imported);
+
     var imported = document.createElement('script');
     imported.src = 'js/movement/left/left.js';
     document.head.appendChild(imported);
