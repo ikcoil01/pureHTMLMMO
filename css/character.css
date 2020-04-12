@@ -1,6 +1,12 @@
+:root {
+    --character-agility-go: all 2s ease-in 0s;
+    --character-agility-stop: all 1s ease-out 0s;
+  }
+
 #usersCharacter{
 position: absolute;
-transition: all 0.5s ease 0s;
+transition: var(--character-agility-go);
+transition: var(--character-agility-stop);
 top: 0;
 left: 0;
 }

@@ -26,6 +26,7 @@ var characterMoveLeftImage = "images/moveleft.gif";
 
 var refreshSpeed =100;
 var avatarSpeed =5;
+var agility =1;
 
 var runningMovementCommand = false;
 var runningMovementUP = false;
