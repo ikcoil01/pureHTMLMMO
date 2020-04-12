@@ -28,7 +28,7 @@ function goDown(){
   
     currYPos=currYPos.replace("px","");
   
-  currYPos = parseInt(currYPos)+2;
+  currYPos = parseInt(currYPos)+avatarSpeed;
   var newPos=currYPos+"px";
   document.getElementById("usersCharacter").style.top = newPos;
 }

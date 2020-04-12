@@ -25,6 +25,7 @@ var characterMoveLeftImage = "images/moveleft.gif";
 
 
 var refreshSpeed =100;
+var avatarSpeed =5;
 
 var runningMovementCommand = false;
 var runningMovementUP = false;
@@ -37,7 +38,23 @@ var runningMovementDOWNLEFT = false;
 var runningMovementDOWNRIGHT = false;
 
 window.onload=function(){
-    var imported = document.createElement('script');
+  var imported = document.createElement('script');
+  imported.src = 'js/movement/downleft/downleft.js';
+  document.head.appendChild(imported);
+  
+  var imported = document.createElement('script');
+  imported.src = 'js/movement/downright/downright.js';
+  document.head.appendChild(imported);
+
+  var imported = document.createElement('script');
+  imported.src = 'js/movement/upright/upright.js';
+  document.head.appendChild(imported);
+
+  var imported = document.createElement('script');
+  imported.src = 'js/movement/upleft/upleft.js';
+  document.head.appendChild(imported);
+
+  var imported = document.createElement('script');
     imported.src = 'js/movement/right/right.js';
     document.head.appendChild(imported);
 
