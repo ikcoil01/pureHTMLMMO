@@ -5,7 +5,8 @@
 /*mobile speed*/
 var ySpeed = 1;
 var xSpeed = 1;
-
+var presentCharacterPositionX = "20";
+var presentCharacterPositionY = "50";
 
 
 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
@@ -39,6 +40,7 @@ var runningMovementDOWNLEFT = false;
 var runningMovementDOWNRIGHT = false;
 
 window.onload=function(){
+
   var imported = document.createElement('script');
   imported.src = 'js/movement/downleft/downleft.js';
   document.head.appendChild(imported);
@@ -76,6 +78,10 @@ window.onload=function(){
     document.head.appendChild(imported);
     
     var imported = document.createElement('script');
-    imported.src = 'js/firstload.js';
+    imported.src = 'js/load/setSavedPosition.js';
+    document.head.appendChild(imported);
+
+    var imported = document.createElement('script');
+    imported.src = 'js/movement/location.js';
     document.head.appendChild(imported);
   }

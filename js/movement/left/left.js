@@ -13,7 +13,7 @@ mousekey.addEventListener('mouseup', function() {
 });
 
 function goLeft(){
-  
+  setLocation();
   document.getElementById("moveKeysRight").style.visibility = "hidden";
   document.getElementById("moveKeysDown").style.visibility = "hidden";
   document.getElementById("moveKeysLeft").style.visibility = "visible";

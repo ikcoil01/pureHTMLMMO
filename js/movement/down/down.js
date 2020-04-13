@@ -11,7 +11,7 @@ mousekey.addEventListener('mouseup', function() {
 });
 
 function goDown(){
-  
+  setLocation();
   document.getElementById("moveKeysRight").style.visibility = "hidden";
   document.getElementById("moveKeysDown").style.visibility = "visible";
   document.getElementById("moveKeysLeft").style.visibility = "hidden";

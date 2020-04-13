@@ -5,6 +5,7 @@
 
 #usersCharacter{
 position: absolute;
+/*adding a animiation morph here for the transition would be neat*/
 transition: var(--character-agility-go);
 transition: var(--character-agility-stop);
 top: 0;
