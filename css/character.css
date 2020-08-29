@@ -1,13 +1,5 @@
-:root {
-    --character-agility-go: all 2s ease-in 0s;
-    --character-agility-stop: all 1s ease-out 0s;
-  }
-
 #usersCharacter{
 position: absolute;
-/*adding a animiation morph here for the transition would be neat*/
-transition: var(--character-agility-go);
-transition: var(--character-agility-stop);
 top: 0;
 left: 0;
 }

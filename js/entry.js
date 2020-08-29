@@ -5,8 +5,7 @@
 /*mobile speed*/
 var ySpeed = 1;
 var xSpeed = 1;
-var presentCharacterPositionX = "20";
-var presentCharacterPositionY = "50";
+
 
 
 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
@@ -26,8 +25,6 @@ var characterMoveLeftImage = "images/moveleft.gif";
 
 
 var refreshSpeed =100;
-var avatarSpeed =5;
-var agility =1;
 
 var runningMovementCommand = false;
 var runningMovementUP = false;
@@ -40,24 +37,7 @@ var runningMovementDOWNLEFT = false;
 var runningMovementDOWNRIGHT = false;
 
 window.onload=function(){
-
-  var imported = document.createElement('script');
-  imported.src = 'js/movement/downleft/downleft.js';
-  document.head.appendChild(imported);
-  
-  var imported = document.createElement('script');
-  imported.src = 'js/movement/downright/downright.js';
-  document.head.appendChild(imported);
-
-  var imported = document.createElement('script');
-  imported.src = 'js/movement/upright/upright.js';
-  document.head.appendChild(imported);
-
-  var imported = document.createElement('script');
-  imported.src = 'js/movement/upleft/upleft.js';
-  document.head.appendChild(imported);
-
-  var imported = document.createElement('script');
+    var imported = document.createElement('script');
     imported.src = 'js/movement/right/right.js';
     document.head.appendChild(imported);
 
@@ -78,10 +58,6 @@ window.onload=function(){
     document.head.appendChild(imported);
     
     var imported = document.createElement('script');
-    imported.src = 'js/load/setSavedPosition.js';
-    document.head.appendChild(imported);
-
-    var imported = document.createElement('script');
-    imported.src = 'js/movement/location.js';
+    imported.src = 'js/firstload.js';
     document.head.appendChild(imported);
   }
